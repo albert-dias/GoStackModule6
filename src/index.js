@@ -1,24 +1,17 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#7519c1',
-    },
-    text: {
-        color: '#fff',
-        fontWeight: 'bold',
-        fontSize: 22,
-    },
-});
+import './config/ReactotronConfig';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'react-native';
+import Routes from './routes';
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <Text style={styles.text}>Te amo meu bebê!</Text>
-        </View>
+        <NavigationContainer>
+            <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+            <Routes />
+        </NavigationContainer>
     );
 }
